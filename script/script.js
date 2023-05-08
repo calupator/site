@@ -79,7 +79,7 @@ let headerCartCount = document.querySelector('.count');
 function removeProduct(event) {
 	const parent = event.target.parentNode.closest('.cart_product');
 	parent.remove();
-	
+
 	const count = Number.parseInt(headerCartCount.textContent) - 1;
 	document.querySelector('.count').textContent = count;
 	if (cartProductsContainer.children.length === 0) {
@@ -204,7 +204,7 @@ function addProducts(event) {
 
 	headerCartCount = document.querySelector('.count');
 
-	if (!headerCartCount || headerCartCount.textContent ==='') {
+	if (!headerCartCount || headerCartCount.textContent === '') {
 		headerCartCount = document.createElement('span');
 		headerCartCount.classList.add('count');
 		headerCartCount.textContent = 0;
